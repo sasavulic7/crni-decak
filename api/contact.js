@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 
 // CORS middleware sa vašom produkcijskom adresom
 const corsHandler = cors({
-  origin: "https://crni-decak.vercel.app", // Vaš produkcijski URL
+  origin: "crni-decak.vercel.app", // Vaš produkcijski URL
 });
 
 export default async function handler(req, res) {
