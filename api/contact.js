@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import cors from "cors";
 
 // SMTP konfiguracija za Nodemailer
 const transporter = nodemailer.createTransport({
@@ -9,29 +10,36 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// CORS middleware sa vašom produkcijskom adresom
+const corsHandler = cors({
+  origin: "https://crni-decak.vercel.app", // Vaš produkcijski URL
+});
+
 export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const { name, email, message } = req.body;
+  return new Promise((resolve, reject) => {
+    corsHandler(req, res, async () => {
+      if (req.method === "POST") {
+        const { name, email, message } = req.body;
 
-    const mailOptions = {
-      from: email,
-      to: process.env.EMAIL_USER, // Tvoj email na koji ćeš primati poruke
-      subject: `Kontakt forma - poruka od ${name}`,
-      text: `Ime: ${name}\nEmail: ${email}\nPoruka:\n${message}`
-    };
+        const mailOptions = {
+          from: email,
+          to: process.env.EMAIL_USER, // Tvoj email na koji ćeš primati poruke
+          subject: `Kontakt forma - poruka od ${name}`,
+          text: `Ime: ${name}\nEmail: ${email}\nPoruka:\n${message}`
+        };
 
-    try {
-      // Slanje emaila
-      await transporter.sendMail(mailOptions);
-      res.status(200).json({ message: "Email je uspešno poslat!" });
-    } catch (error) {
-      console.error("Greška pri slanju emaila:", error);
-      res
-        .status(500)
-        .json({ message: "Došlo je do greške pri slanju emaila." });
-    }
-  } else {
-    // Odbijanje drugih HTTP metoda osim POST
-    res.status(405).json({ message: "Method Not Allowed" });
-  }
+        try {
+          // Slanje emaila
+          await transporter.sendMail(mailOptions);
+          res.status(200).json({ message: "Email je uspešno poslat!" });
+        } catch (error) {
+          console.error("Greška pri slanju emaila:", error);
+          res.status(500).json({ message: "Došlo je do greške pri slanju emaila." });
+        }
+      } else {
+        // Odbijanje drugih HTTP metoda osim POST
+        res.status(405).json({ message: "Method Not Allowed" });
+      }
+    });
+  });
 }
