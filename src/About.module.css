@@ -1,3 +1,4 @@
+/* Osnovni stilovi (desktop) */
 .container {
   display: flex; /* Koristi Flexbox za raspored elemenata */
   align-items: center; /* Poravnava elemente vertikalno */
@@ -38,26 +39,41 @@
   font-family: "Nosifer", cursive;
 }
 
-.button {
-  background-color: #4caf50; /* Zeleno pozadinsko */
-  color: white; /* Bele slova */
-  border: none; /* Bez okvira */
-  padding: 10px 20px; /* Unutrašnje margine */
-  text-align: center; /* Centriranje teksta */
-  text-decoration: none; /* Bez podvlačenja */
-  display: inline-block; /* Da se ponaša kao inline element */
-  font-size: 16px; /* Veličina fonta */
-  margin: 4px 2px; /* Margine oko dugmeta */
-  cursor: pointer; /* Pokazivač miša */
-  border-radius: 5px; /* Zaobljeni ivice */
-  transition: background-color 0.3s, transform 0.2s; /* Efekti prelaza */
+/* Osnovni stilovi za mobilne uređaje */
+.container {
+  flex-direction: column; /* Postavlja elemente u kolonu na mobilnim uređajima */
+  padding: 10px; /* Dodaje malo paddinga */
 }
 
-.button:hover {
-  background-color: #45a049; /* Tamnija nijansa pri hover-u */
-  transform: scale(1.05); /* Blago povećanje pri hover-u */
+.image {
+  flex: none; /* Onemogućava fleksibilnost za mobilne uređaje */
+  width: 100%; /* Slika će zauzeti punu širinu roditeljskog elementa */
 }
 
-.button:active {
-  transform: scale(0.95); /* Smanjenje pri kliku */
+.text {
+  flex: none; /* Onemogućava fleksibilnost za mobilne uređaje */
+  width: 100%; /* Težimo punoj širini */
+  padding: 10px 0; /* Dodaje padding za razmak između slike i teksta */
+}
+
+/* Medijski upit za veće ekrane */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Prebacuje se na red za veće ekrane */
+    align-items: flex-start; /* Poravnava elemente na početku */
+  }
+
+  .image {
+    flex: 1; /* Daje ovoj sekciji fleksibilnost da zauzima više prostora */
+  }
+
+  .text {
+    flex: 1; /* Takođe daje ovoj sekciji fleksibilnost */
+    padding-left: 20px; /* Razmak između slike i teksta */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Vraća na veću veličinu fonta za desktop */
+    margin-bottom: 2rem; /* Vraća na veći razmak za desktop */
+  }
 }
