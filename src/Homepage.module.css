@@ -1,0 +1,186 @@
+html,
+body {
+  margin: 0 0 0 0;
+  background-color: #1a1a1a;
+}
+.hero {
+  background-image: url("../public/images/wallpaper.jpg"); /* Putanja do pozadinske slike */
+  background-size: cover; /* Pokriva ceo prostor */
+  background-position: center; /* Centriranje slike */
+  background-repeat: no-repeat; /* Ne ponavljaj sliku */
+  color: white;
+  padding: 50px;
+  text-align: center;
+  min-height: 70vh; /* Osigurava da sekcija ima minimalnu visinu */
+  display: flex;
+  justify-content: center; /* Centriranje sadržaja */
+  align-items: center; /* Vertikalno centriranje sadržaja */
+}
+
+.heroContent {
+  max-width: 800px; /* Maksimalna širina sadržaja */
+  margin: 0 auto;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Poluprovidna pozadina za bolju čitljivost teksta */
+  padding: 20px; /* Dodaj padding unutra */
+  border-radius: 10px; /* Zaobljeni uglovi */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Dodaj senku */
+}
+
+.logo {
+  width: 200px; /* Širina loga, prilagodi po potrebi */
+  height: auto; /* Očuvaj proporcije */
+  margin-bottom: 20px; /* Razmak ispod loga */
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #ff4500;
+  font-family: "Nosifer", cursive;
+}
+
+.ctaButton {
+  background-color: #61dafb; /* Primer boje dugmeta */
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #21a1f1; /* Promena boje na hover */
+}
+
+.latestStories {
+  padding: 2rem;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.storiesTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff4500;
+  font-family: "Nosifer", cursive;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.videoCard {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.videoTitle {
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+.videoDescription {
+  font-size: 0.9rem;
+  padding: 0 1rem 1rem;
+  color: #ccc;
+}
+
+/* Citati */
+
+.quotesSection {
+  color: #ff4500;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.quotesTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff4500;
+  font-family: "Nosifer", cursive;
+}
+
+.quotesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Razmak između citata */
+}
+
+.quote {
+  background-color: #333; /* Tamnija pozadina za citate */
+  border-left: 5px solid #ff4500; /* Leva ivica */
+  padding: 15px 20px;
+  border-radius: 5px; /* Zaobljeni ivici */
+  font-style: italic;
+  font-size: 1.2rem;
+  width: 80%; /* Širina citata */
+  max-width: 600px; /* Maksimalna širina */
+}
+
+.quizContainer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px; /* Unutrašnji razmak */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Senka za dubinu */
+}
+
+.quizTitle {
+  font-size: 2.5rem; /* Veliki naslov */
+  color: #ff4500;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Sva slova velika */
+  font-family: "Nosifer", cursive;
+}
+
+.quizTest {
+  font-size: 1.5rem; /* Manji naslov */
+  color: #fff; /* Srednje tamna boja teksta */
+  margin-bottom: 20px;
+}
+
+.btnQuizz {
+  padding: 12px 15px; /* Manji unutrašnji razmak */
+  font-size: 1rem; /* Veličina fonta */
+  color: white; /* Boja teksta */
+  background-color: #ff4500; /* Plava pozadina */
+  border: none; /* Bez ivica */
+  border-radius: 5px; /* Zaobljene ivice */
+  cursor: pointer; /* Pokazivač kursora */
+  transition: background-color 0.3s, transform 0.3s; /* Animacije */
+  width: 20%; /* Dugme zauzima 50% širine roditeljskog elementa */
+}
+
+.btnQuizz:hover {
+  background-color: #000; /* Tamnija nijansa plave pri hover-u */
+  transform: translateY(-2px); /* Pomeri dugme nagore pri hover-u */
+}
+
+@media (max-width: 768px) {
+  .btnQuizz {
+    width: 40%; /* Dugme zauzima 50% širine roditeljskog elementa */
+  }
+}

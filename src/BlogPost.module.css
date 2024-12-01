@@ -1,0 +1,69 @@
+.postContainer {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.postTitle {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.postAuthor,
+.postDate {
+  font-size: 14px;
+  color: #afafaf;
+}
+
+.postContent {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: white;
+}
+
+.postImage {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Stilizacija za filmove */
+.moviesList {
+  margin-top: 40px;
+}
+
+.movie {
+  margin-bottom: 30px;
+}
+
+.movieTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff4500;
+}
+
+.movieImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.movie p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: white;
+}
+.postTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff4500;
+}
+
+.movies h2 {
+  color: white;
+}

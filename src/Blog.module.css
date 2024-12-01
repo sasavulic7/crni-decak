@@ -1,0 +1,47 @@
+/* Blog.module.css */
+.blogContainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+.postCard {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.postTitle a {
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff4500;
+}
+
+.postDescription {
+  margin: 10px 0;
+  font-size: 16px;
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff4500;
+  font-family: "Nosifer", cursive;
+}

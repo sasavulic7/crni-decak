@@ -1,0 +1,99 @@
+.footer {
+  background-color: #1a1a1a; /* Tamna pozadina */
+  color: #f5f5f5; /* Svetlo siva boja za tekst */
+  padding: 40px 0; /* Povećan padding za više prostora */
+  text-align: center; /* Centriranje teksta */
+  position: relative; /* Pozicija relativna za bolju kontrolu */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Senka iznad footera */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px; /* Maksimalna širina kontejnera */
+  margin: 0 auto; /* Centriranje kontejnera */
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column; /* Prikazivanje u koloni */
+  align-items: center; /* Centriranje elemenata */
+  gap: 20px; /* Razmak između stavki */
+}
+
+.footerLeft {
+  margin-bottom: 20px; /* Razmak ispod leve strane */
+}
+
+.footerLeft h2 {
+  font-size: 2em; /* Veći font za naslov */
+  margin: 0; /* Uklanjanje podrazumevanih margina */
+  color: #ff4500; /* Naglašena boja za naslov */
+}
+
+.footerLeft p {
+  font-size: 0.9em; /* Manji font za tekst */
+  margin: 5px 0; /* Razmak između paragrafa */
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column; /* Prikazivanje linkova u koloni */
+  align-items: center; /* Centriranje linkova */
+}
+
+.footerRight ul {
+  list-style: none; /* Uklanjanje oznaka sa liste */
+  padding: 0; /* Uklanjanje podrazumevanih paddinga */
+  margin: 0; /* Uklanjanje podrazumevanih margina */
+  display: flex;
+  gap: 15px; /* Razmak između stavki */
+}
+
+.footerRight li {
+  display: inline; /* Prikazivanje stavki u redu */
+}
+
+.footerRight a {
+  color: #61dafb; /* Svetla boja za linkove */
+  text-decoration: none; /* Uklanjanje podvlačenja */
+  transition: color 0.3s, transform 0.3s; /* Efekti prelaza */
+}
+
+.footerRight a:hover {
+  color: #ff6347; /* Promena boje pri hover efektu */
+  text-decoration: underline; /* Podvlačenje pri hover */
+  transform: scale(1.1); /* Lagano povećanje na hover */
+}
+
+/* Stilizacija za ikone društvenih mreža */
+.socialMedia {
+  display: flex;
+  gap: 15px; /* Razmak između ikona */
+  margin-top: 10px; /* Razmak iznad ikona */
+}
+
+.icon {
+  font-size: 24px; /* Veličina ikona */
+  color: #61dafb; /* Boja ikona */
+  transition: color 0.3s; /* Efekat prelaza */
+}
+
+.icon:hover {
+  color: #ff6347; /* Promena boje pri hover efektu */
+}
+
+/* Dodavanje medijskog upita za bolje prikazivanje na manjim uređajima */
+@media (max-width: 600px) {
+  .footerContent {
+    flex-direction: column; /* Prebacivanje u kolonu na manjim ekranima */
+  }
+
+  .footerRight ul {
+    flex-direction: column; /* Lista u koloni */
+    align-items: center; /* Centriranje elemenata */
+  }
+
+  .footerRight li {
+    margin: 5px 0; /* Razmak između stavki */
+  }
+}

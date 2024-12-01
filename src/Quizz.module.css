@@ -1,0 +1,114 @@
+.quizContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Senka */
+  transition: all 0.3s ease; /* Efekat prelaza */
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.quizTitle {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Arial", sans-serif; /* Moderni font */
+  font-size: 2rem;
+  color: #ff4500;
+}
+
+.quizDescription {
+  font-size: 1.2em;
+  color: #ffffff; /* Siva boja */
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.question {
+  font-size: 1.8em;
+  color: #ff4500;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  margin: 10px 0;
+}
+
+.option button {
+  width: 100%; /* Da dugmad zauzimaju celu širinu */
+  padding: 10px;
+  font-size: 1.2em;
+  color: #ff4500;
+  background-color: #000000; /* Zeleno dugme */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efekat prelaza */
+}
+
+.option button:hover {
+  background-color: #ff4500; /* Tamnija zelena pri hoveru */
+  color: #000000;
+}
+
+.resultMessage {
+  font-size: 1.5em;
+  color: #ff4500; /* Crvena boja za rezultate */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.resetButton {
+  background-color: #ff4500; /* Crvena boja za dugme */
+  color: white; /* Bela boja teksta */
+  border: none; /* Bez ivice */
+  padding: 10px 20px; /* Unutrašnji razmak */
+  border-radius: 5px; /* Zaobljeni ivici */
+  cursor: pointer; /* Kursor u obliku ruke */
+  font-size: 16px; /* Veličina fonta */
+  margin-top: 20px; /* Razmak iznad dugmeta */
+  transition: background-color 0.3s; /* Efekat prelaza */
+}
+
+.resetButton:hover {
+  background-color: #000000;
+  color: #ffffff; /* Tamnija nijansa crvene prilikom prelaska mišem */
+}
+
+.correctAnswer {
+  background-color: #4caf50 !important; /* Zelena za tačne odgovore */
+  color: white !important;
+}
+
+.incorrectAnswer {
+  background-color: #ff1100 !important; /* Crvena za netačne odgovore */
+  color: white !important;
+}
+
+.nextButton {
+  background-color: #ff4500; /* Narandžasta boja za dugme */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.nextButton:hover {
+  background-color: #e63900; /* Tamnija narandžasta pri hoveru */
+}
+
+.questionText {
+  color: white;
+  font-size: 1.5rem;
+}

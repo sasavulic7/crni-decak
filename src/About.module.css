@@ -1,0 +1,63 @@
+.container {
+  display: flex; /* Koristi Flexbox za raspored elemenata */
+  align-items: center; /* Poravnava elemente vertikalno */
+}
+
+.image {
+  flex: 1; /* Daje ovoj sekciji fleksibilnost da zauzima više prostora */
+}
+
+.image img {
+  width: 100%; /* Slika će zauzeti punu širinu roditeljskog elementa */
+  height: auto; /* Održava proporcije slike */
+}
+
+.text {
+  flex: 1; /* Takođe daje ovoj sekciji fleksibilnost */
+  padding-left: 20px; /* Razmak između slike i teksta */
+}
+
+.text h2 {
+  text-align: justify;
+  margin-right: 15px;
+  color: #000; /* Neon narandžasta boja */
+  text-shadow: 0 0 5px rgba(190, 83, 0, 0.8), 0 0 10px rgba(255, 111, 0, 0.5); /* Efekt sjaja */
+}
+
+.text h1 {
+  text-align: center;
+  color: #000; /* Neon narandžasta boja */
+  text-shadow: 0 0 5px rgba(190, 83, 0, 0.8), 0 0 10px rgba(255, 111, 0, 0.5); /* Efekt sjaja */
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff4500;
+  font-family: "Nosifer", cursive;
+}
+
+.button {
+  background-color: #4caf50; /* Zeleno pozadinsko */
+  color: white; /* Bele slova */
+  border: none; /* Bez okvira */
+  padding: 10px 20px; /* Unutrašnje margine */
+  text-align: center; /* Centriranje teksta */
+  text-decoration: none; /* Bez podvlačenja */
+  display: inline-block; /* Da se ponaša kao inline element */
+  font-size: 16px; /* Veličina fonta */
+  margin: 4px 2px; /* Margine oko dugmeta */
+  cursor: pointer; /* Pokazivač miša */
+  border-radius: 5px; /* Zaobljeni ivice */
+  transition: background-color 0.3s, transform 0.2s; /* Efekti prelaza */
+}
+
+.button:hover {
+  background-color: #45a049; /* Tamnija nijansa pri hover-u */
+  transform: scale(1.05); /* Blago povećanje pri hover-u */
+}
+
+.button:active {
+  transform: scale(0.95); /* Smanjenje pri kliku */
+}

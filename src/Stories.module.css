@@ -1,0 +1,132 @@
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff4500;
+  font-family: "Nosifer", cursive;
+}
+
+/* Video card styles */
+.videoCard {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.videoCard:hover {
+  transform: scale(1.05);
+}
+
+/* Thumbnail styles */
+.thumbnail {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid #ff4500; /* Red accent on thumbnail */
+}
+
+/* Video title styles */
+.videoTitle {
+  font-size: 1.2em;
+  margin: 10px;
+  color: #fff; /* Neon narandžasta boja */
+  text-shadow: 0 0 5px rgba(190, 83, 0, 0.8), 0 0 10px rgba(255, 111, 0, 0.5); /* Efekt sjaja */
+}
+
+/* Video description styles */
+.videoDescription {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0 10px 10px;
+}
+
+/* Centering error message */
+.error {
+  text-align: center;
+  color: red;
+  margin: 20px 0;
+}
+
+.viewCount {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.sortContainer {
+  display: flex;
+  justify-content: center; /* Centriraj sortirajuću listu */
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #f5f5f5; /* Lagana siva pozadina za isticanje */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Dodaj senku za moderniji izgled */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sortOption {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff; /* Bela pozadina za dropdown */
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: "Montserrat", sans-serif;
+}
+
+#sortOption:hover {
+  border-color: #ff4500; /* Oboji border pri hoveru */
+  box-shadow: 0 0 5px rgba(255, 69, 0, 0.5); /* Dodaj blagu senku u narandžastoj boji */
+}
+
+#sortOption:focus {
+  border-color: #ff4500;
+  box-shadow: 0 0 8px rgba(255, 69, 0, 0.7); /* Fokus efekat sa izraženijom senkom */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.pagination button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #555;
+}
+
+.pagination span {
+  font-size: 16px;
+  margin: 0 10px;
+}
