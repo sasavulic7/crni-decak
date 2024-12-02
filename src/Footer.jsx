@@ -28,9 +28,6 @@ function Footer() {
                 <Link to="/Price">Price</Link>
               </li>
               <li>
-                <Link to="/o-nama">O nama</Link>
-              </li>
-              <li>
                 <Link to="Blog">Blog</Link>
               </li>
               <li>
